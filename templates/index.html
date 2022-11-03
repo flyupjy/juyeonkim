@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+HOME
+{% endblock %}
+
+{% block breadcrumb %}
+    <li class="uk-disabled"><a>Home</a></li>
+{% endblock %}
+
+{% block menu %}
+    <!-- <div class="uk-margin-remove-top">
+        <a class="uk-link-text uk-disabled" href="#">Contemporary Artist Ju-Yeon Kim</a>
+    </div> -->
+{% endblock %}
+
+{% block content %}
+    <div>
+        {% for obj in main %}
+            <div class="{% if forloop.first %}uk-margin-medium-top{% else %}uk-margin-large-top{% endif %} uk-width-large center">
+                <div class="uk-box-shadow-xlarge">
+                    <img data-src="{{ obj.painting.photos.first.image.url }}" alt="{{ obj.title }}" class="lazyload">
+                </div>
+                <p class="uk-text-uppercase uk-text-meta uk-text-bold uk-margin-remove-bottom">{{ obj.painting.title }}</p>
+                <p class="uk-text-capitalize uk-text-meta uk-margin-remove-top">{{ obj.painting.caption }}, {{ obj.painting.date|date:"F j, Y" }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

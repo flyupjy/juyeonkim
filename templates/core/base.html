@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}JUYEONKIM.COM{% endblock %}</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/js/uikit-icons.min.js"></script>
+    <!-- Google Font for Header -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Roboto&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Customized CSS -->
+    <link rel="stylesheet" href="{% static 'css/customizedStyle.css' %}">
+</head>
+<body uk-height-viewport>
+    <div class="uk-container-small uk-padding-small uk-padding-remove-top uk-margin-auto">
+        <div>
+        <!-- <div uk-sticky="offset: 0"> -->
+            <div class=""> <!-- uk-flex uk-flex-right -->
+                <nav class="uk-navbar uk-navbar-container uk-margin-remove" style="background-color:transparent;!important" uk-navbar="mode:click;">
+                    <div class="uk-navbar-left">
+                    </div>
+                    <div class="uk-navbar-right">
+                    <h2 class="uk-h2 uk-margin-top title-heading">
+                        <a class="uk-text-decoration-none" href="{% url 'index' %}">JUYEON KIM</a>
+                    </h2>
+                        <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="{% url 'index' %}"><span uk-icon="home"></span>&nbsp;Home</a></li>
+                                <li><a href="{% url 'exhibition:exhibitions' %}"><span uk-icon="home"></span>&nbsp;Exhibitions</a></li>
+                                <li><a href="{% url 'work:painting_archive' %}"><span uk-icon="image"></span>&nbsp;Works</a></li>
+                                <li><a href="{% url 'text' %}"><span uk-icon="file-text"></span>&nbsp;Text</a></li>
+                                <li><a href="{% url 'about' %}"><span uk-icon="user"></span>&nbsp;About</a></li>
+                                <li><a href="{% url 'contact:contact' %}"><span uk-icon="mail"></span>&nbsp;Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+            <ul class="uk-breadcrumb uk-margin-small-top">
+                {% block breadcrumb %}
+                {% endblock %}
+            </ul>
+            
+            {% block menu %}
+            {% endblock %}
+        </div>
+        
+            {% block content %}
+            {% endblock %}
+        
+    </div>
+    <!--  Lazyload Images  -->
+    <script src="{% static 'javascript/lazysizes.min.js' %}"></script>
+</body>
+</html>

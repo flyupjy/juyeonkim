@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+CONTACT
+{% endblock %}
+
+{% block breadcrumb %}
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li class="uk-disabled"><a>Contact</a></li>
+{% endblock %}
+
+{% block menu %}
+    <div class="uk-margin-remove-top">
+        <a class="uk-link-text uk-disabled" href="#">Contact Me</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="{% if forloop.first %}uk-margin-medium-top{% else %}uk-margin-large-top{% endif %} uk-width-large center">
+        <div class="uk-flex uk-flex-center">
+            <p>Your email has been sent. Thank you!</p>
+        </div>
+    </div>
+{% endblock %}

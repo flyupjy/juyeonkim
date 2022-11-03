@@ -1,0 +1,46 @@
+body {
+    /* background-image: url("/static/image/wall.jpg");
+    background-repeat: repeat;
+    background-attachment: scroll; */
+    background-color: white;
+}
+
+.title-heading {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.uk-navbar-right {
+    gap: 15px;
+}
+
+.uk-h2 {
+    margin: 0;
+}
+
+.uk-text-decoration-none {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.uk-text-decoration-none:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.uk-navbar-toggle {
+    align-items: flex-end;
+    min-height: 40px;
+}
+
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.purchase-btn {
+     border:1px solid #2d3137 !important;
+}
+
+.purchase-btn:hover {
+    background-color: #2d3137 !important;
+    color: white !important;
+}

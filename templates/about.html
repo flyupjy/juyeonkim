@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block title%}
+About Me
+{% endblock %}
+
+{% block breadcrumb %}
+    <ul class="uk-breadcrumb">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li class="uk-disabled"><a>Text</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+<div class="uk-container uk-container-xsmall uk-margin-large uk-card uk-card-default uk-card-body uk-padding-small" style="font-family: 'Nanum Myeongjo', serif;">
+    <h4 class="uk-text-center uk-margin-top">안녕하세요. 김주연입니다.</h4>
+    <div class="uk-text-small uk-margin-large-top" style="text-align:justify;letter-spacing:0.03rem;word-spacing:0.1rem;line-height:1.5rem;column-gap:2rem;">
+        <p>약력</p>
+        <br>
+        <br>
+        <!-- <p class="uk-text-right uk-margin">작업노트 중</p>    -->
+    </div>
+</div>
+{% endblock %}

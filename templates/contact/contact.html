@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+CONTACT
+{% endblock %}
+
+{% block breadcrumb %}
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li class="uk-disabled"><a>Contact</a></li>
+{% endblock %}
+
+{% block menu %}
+{% endblock %}
+
+{% block content %}
+    <div class="{% if forloop.first %}uk-margin-medium-top{% else %}uk-margin-large-top{% endif %} uk-width-large center">
+        <div class="uk-margin uk-card uk-card-default uk-card-body">
+            <form action="" method="post">{% csrf_token %}
+
+                {{ form.non_field_errors }}
+                <div class="fieldWrapper">
+                    {{ form.sender.errors }}
+                    <label class="uk-text-small" for="{{ form.sender.id_for_label }}">Your email address</label>
+                    <br>
+                    {{ form.sender }}
+                </div>
+                <div class="uk-margin-small-top">
+                    {{ form.subject.errors }}
+                    <label class="uk-text-small" for="{{ form.subject.id_for_label }}">Subject</label>
+                    <br>
+                    {{ form.subject }}
+                </div>
+                <div class="uk-margin-small-top">
+                    {{ form.message.errors }}
+                    <label class="uk-text-small" for="{{ form.message.id_for_label }}">Message</label>
+                    <br>
+                    {{ form.message }}
+                </div>            
+
+                <button class="uk-margin-small-top uk-button uk-button-default uk-width-1-1 uk-text-bold" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
