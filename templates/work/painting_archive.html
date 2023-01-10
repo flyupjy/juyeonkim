@@ -21,11 +21,11 @@
 {% block content %}
     {% for obj in latest %}
         <div class="{% if forloop.first %}uk-margin-medium-top{% else %}uk-margin-large-top{% endif %} uk-width-large center">
-            <div class="uk-box-shadow-xlarge">
+            <div class="img-shadow">
                 <img data-src="{{ obj.photos.first.image.url }}" alt="{{ obj.title }}" class="lazyload">
             </div>
             <p class="uk-text-uppercase uk-text-meta uk-text-bold uk-margin-remove-bottom">{{ obj.title }}</p>
-            <p class="uk-text-capitalize uk-text-meta uk-margin-remove-top">{{ obj.caption }}, {{ obj.date|date:"F j, Y" }}</p>
+            <p class="uk-text-capitalize uk-text-meta uk-margin-remove-top">{{ obj.caption }}, {{ obj.date|date:"F, Y" }}</p>
         </div>
     {% endfor %}
 {% endblock %}

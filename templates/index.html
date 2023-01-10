@@ -15,10 +15,10 @@ HOME
 {% endblock %}
 
 {% block content %}
-    <div>
+    <div class="uk-flex uk-flex-center uk-flex-middle" uk-height-viewport="expand: true">
         {% for obj in main %}
             <div class="{% if forloop.first %}uk-margin-medium-top{% else %}uk-margin-large-top{% endif %} uk-width-large center">
-                <div class="uk-box-shadow-xlarge">
+                <div class="img-shadow">
                     <img data-src="{{ obj.painting.photos.first.image.url }}" alt="{{ obj.title }}" class="lazyload">
                 </div>
                 <p class="uk-text-uppercase uk-text-meta uk-text-bold uk-margin-remove-bottom">{{ obj.painting.title }}</p>

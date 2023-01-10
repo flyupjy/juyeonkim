@@ -2,7 +2,6 @@ from io import BytesIO
 
 from django.core.files import File
 from django.db import models
-from django.core.exceptions import ValidationError
 from PIL import Image, ImageOps
 
 

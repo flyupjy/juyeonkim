@@ -6,11 +6,29 @@ body {
 }
 
 .title-heading {
-    font-family: 'Open Sans', sans-serif;
+    padding-top: 16px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    color: #333;
+}
+.uk-navbar, .submenu {
+    max-width: 450px;
+    margin: 0 auto !important;
+}
+.uk-navbar-left {
+    gap: 15px;
 }
 
-.uk-navbar-right {
-    gap: 15px;
+.uk-navbar-toggle {
+    margin-top: 20px;    
+}
+
+.uk-navbar-toggle svg {
+    fill: #333;
+}
+
+.uk-nav li {
+    margin: 10px;
 }
 
 .uk-h2 {
@@ -43,4 +61,8 @@ body {
 .purchase-btn:hover {
     background-color: #2d3137 !important;
     color: white !important;
+}
+
+.img-shadow {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.25);
 }
